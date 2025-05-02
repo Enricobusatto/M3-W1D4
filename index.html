@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="reset" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav id="navBar">
+        <a href="#"> <img src="ASSETS/logo.png" alt="logo" class="icon">Our Honey</a>
+        <a href="#"><img src="ASSETS/logo.png" alt="logo" class="icon">Trace Honey</a>
+        <a href="#" id="shopLink"><img src="ASSETS/logo.png" alt="logo" class="icon">Shop</a>
+        <a href="#"><img src="ASSETS/logo.png" alt="logo" class="icon">Facilities</a>
+        <a href="#"><img src="ASSETS/logo.png" alt="logo" class="icon">Contacts</a>
+    </nav>
+    <header>
+        <h1>Welcome to Honey Home</h1>
+        <p>Your one-stop shop for the finest honey.</p>
+    </header>
+    <main>
+        <div class="container">
+            <section class="image">
+                <img src="ASSETS/honey.jpg" alt="immagine of honey">
+            </section>
+            <section class="text">
+                <h2>Our delicious Honey</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed felis massa, sagittis sit amet turpis
+                    in, pharetra semper metus. Donec sit amet commodo enim. Fusce cursus in tellus ut malesuada. Aenean
+                    feugiat ex arcu, eu volutpat lectus rhoncus viverra. Sed pulvinar interdum velit, non tincidunt
+                    neque placerat sit amet.
+                    Donec efficitur at mi quis lacinia. Mauris orci neque, lobortis ut arcu sed, ullamcorper luctus
+                    diam. Duis consequat nisi eget sem bibendum, pulvinar suscipit elit gravida. Nam sollicitudin enim a
+                    mauris maximus cursus. Integer porttitor est vitae gravida facilisis. Etiam elementum
+                    lectus ac mollis feugiat.
+                </p>
+            </section>
+            <button class="my-button" id="shopButton">Shop!</button>
+        </div>
+        <div class="card">
+            <section class="imgCard">
+                <img src="ASSETS/honey.jpg" alt="immagine of honey">
+            </section>
+            <div class="description">
+                <section class="textCard">
+                    <h3>100% Bio Honey</h3>
+                    <p>Italian, no Treated</p>
+                </section>
+                <section class="priceCard">
+                    <p>7$/kg</p>
+                </section>
+            </div>
+            <section class="addToCart">Add To Cart!</section>
+            <section class="goBack">Torna Indietro</section>
+        </div>
+    </main>
+    <script>
+        const shopButton = document.getElementById('shopButton');
+        const shopLink = document.getElementById('shopLink');
+        const card = document.querySelector('.card');
+        const container = document.querySelector('.container');
+        const goBack = document.querySelector('.goBack');
+
+        function showCard(e) {
+            e.preventDefault(); // evita il reload della pagina
+            card.style.display = 'flex';
+            container.style.display = 'none';
+        }
+
+        function hideCard() {
+            card.style.display = 'none';
+            container.style.display = 'flex';
+        }
+
+        shopButton.addEventListener('click', showCard);
+        shopLink.addEventListener('click', showCard);
+        goBack.addEventListener('click', hideCard);
+    </script>
+</body>
+
+</html>
