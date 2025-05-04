@@ -55,6 +55,14 @@
     }
 }
 
+@media (min-width: 1950px) {
+    body {
+        font-size: 30px; }
+    .card{
+        width: auto;
+    }
+}
+
 html {
     font-family: "Outfit", sans-serif;
     font-optical-sizing: auto;
